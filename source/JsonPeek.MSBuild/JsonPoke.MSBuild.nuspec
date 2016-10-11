@@ -45,9 +45,6 @@ JSON Poke:
 			b. Returning Meaningfull object that simple strings, so support for batching: If the Result Item is an object, then we are exposing all attributes as metadata on the Result item. For Array of simple values like array of strings, "Value" metadata is exposed, so that %(array.Value) will work
 			1.0.7 : JsonPoke: Support for setting Objects and Object array via JObject and JArray, along with Metadata properties.</releaseNotes>
         <tags>json jsonpeek jsonpoke</tags>
-        <dependencies>
-            <dependency id="Newtonsoft.Json" version="6.0.5" />
-        </dependencies>
     </metadata>
     <files>
         <file src="JsonPoke.MSBuild.Targets" target="build\JsonPoke.MSBuild.Targets" />
