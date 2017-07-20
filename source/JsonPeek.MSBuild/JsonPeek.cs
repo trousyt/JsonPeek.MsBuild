@@ -140,7 +140,7 @@ namespace JsonPeek.MSBuild
             }
 
 
-            var root = JObject.Parse(content);
+            var root = JToken.Parse(content);
             var currentNodes = root.SelectTokens(this.JPath, false);
             foreach (var currentNode in currentNodes)
             {
