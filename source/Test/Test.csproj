@@ -12,7 +12,8 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
-    <NuGetPackageImportStamp>bc5b88fd</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
@@ -131,7 +132,7 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
-    <Error Condition="!Exists('..\packages\JsonPoke.MSBuild.1.0.7\build\JsonPoke.MSBuild.Targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\JsonPoke.MSBuild.1.0.7\build\JsonPoke.MSBuild.Targets'))" />
+    <Error Condition="!Exists('..\packages\JsonPoke.MSBuild.1.0.9\build\JsonPoke.MSBuild.Targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\JsonPoke.MSBuild.1.0.9\build\JsonPoke.MSBuild.Targets'))" />
   </Target>
-  <Import Project="..\packages\JsonPoke.MSBuild.1.0.7\build\JsonPoke.MSBuild.Targets" Condition="Exists('..\packages\JsonPoke.MSBuild.1.0.7\build\JsonPoke.MSBuild.Targets')" />
+  <Import Project="..\packages\JsonPoke.MSBuild.1.0.9\build\JsonPoke.MSBuild.Targets" Condition="Exists('..\packages\JsonPoke.MSBuild.1.0.9\build\JsonPoke.MSBuild.Targets')" />
 </Project>

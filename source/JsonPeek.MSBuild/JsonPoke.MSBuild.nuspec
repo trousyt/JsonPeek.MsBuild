@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>JsonPoke.MSBuild</id>
-        <version>1.0.8</version>
+        <version>1.0.9</version>
         <title>JsonPoke and JsonPeek build tasks</title>
         <authors>Manish Kumar,Toni Arte</authors>
         <owners>Manish Kumar</owners>
@@ -35,16 +35,19 @@ JSON Poke:
     &lt;Message Text="Project.IncludedLibraryVariableSetIds[?(@.Name == 'Lib-69')].Value : @(Lib69Value)" /&gt;
     &lt;Message Text="Project values: %(TestProjects.Name)" /&gt;</description>
         <summary>JsonPoke and JsonPeek build tasks</summary>
-        <releaseNotes>1.0.2: Added JPath derived from Newtonsoft.json http://james.newtonking.com/archive/2014/02/01/json-net-6-0-release-1-%E2%80%93-jsonpath-and-f-support
-			1.0.4 : Fixing JSONPeek to return ITaskItem[] Result as output
-			Upgrade to this version, Need change from .Value to .Result
-			1.0.5 : Support for JsonContent and JsonInputPath.
-			Upgrade to this version needs change from FullFilePath and JsonFile to one JsonInputPath property
-			1.0.6 : JsonPeek enhancements:
-			a. Returing Result as array if JPath points to an array.
-			b. Returning Meaningfull object that simple strings, so support for batching: If the Result Item is an object, then we are exposing all attributes as metadata on the Result item. For Array of simple values like array of strings, "Value" metadata is exposed, so that %(array.Value) will work
-			1.0.7 : JsonPoke: Support for setting Objects and Object array via JObject and JArray, along with Metadata properties.</releaseNotes>
-        <tags>json jsonpeek jsonpoke</tags>
+        <releaseNotes>
+          1.0.2: Added JPath derived from Newtonsoft.json http://james.newtonking.com/archive/2014/02/01/json-net-6-0-release-1-%E2%80%93-jsonpath-and-f-support
+          1.0.4 : Fixing JSONPeek to return ITaskItem[] Result as output
+          Upgrade to this version, Need change from .Value to .Result
+          1.0.5 : Support for JsonContent and JsonInputPath.
+          Upgrade to this version needs change from FullFilePath and JsonFile to one JsonInputPath property
+          1.0.6 : JsonPeek enhancements:
+          a. Returing Result as array if JPath points to an array.
+          b. Returning Meaningfull object that simple strings, so support for batching: If the Result Item is an object, then we are exposing all attributes as metadata on the Result item. For Array of simple values like array of strings, "Value" metadata is exposed, so that %(array.Value) will work
+          1.0.7 : JsonPoke: Support for setting Objects and Object array via JObject and JArray, along with Metadata properties.
+          1.0.9 : JsonPeek : Support Json Array as input json
+        </releaseNotes>
+      <tags>json jsonpeek jsonpoke</tags>
     </metadata>
     <files>
         <file src="JsonPoke.MSBuild.Targets" target="build\JsonPoke.MSBuild.Targets" />
